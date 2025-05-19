@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serralheria Manancial</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #F3EBDD;
+      color: #2F3333;
+    }
+    #splash {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #F3EBDD;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      animation: fadeOut 1s ease-in-out 2.5s forwards;
+    }
+    #splash::before {
+      content: "";
+      position: absolute;
+      background-image: url('logo.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      opacity: 0.05;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+    }
+    #splash img {
+      width: 150px;
+      height: auto;
+      opacity: 1;
+      z-index: 1;
+      animation: zoomIn 2s ease;
+    }
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    header {
+      background-color: #2F3333;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header img {
+      height: 60px;
+    }
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background-color: #fff;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
+    .hero a {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: #D9A520;
+      color: #2F3333;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .section {
+      padding: 3rem 2rem;
+      background-color: #F3EBDD;
+    }
+    .section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .services, .depoimentos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .formulario {
+      background-color: #fff;
+      padding: 2rem;
+      max-width: 500px;
+      margin: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .formulario input, .formulario select, .formulario button {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .formulario button {
+      background-color: #D9A520;
+      color: #2F3333;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #2F3333;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="splash">
+    <img src="logo.png" alt="Serralheria Manancial">
+  </div>
+  <header>
+    <img src="logo.png" alt="Serralheria Manancial">
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <h1>Excelência em Estruturas Metálicas</h1>
+    <p>Portões, coberturas, grades e soluções sob medida para seu projeto</p>
+    <a href="https://wa.me/5511947590651" target="_blank">Solicite um Orçamento no WhatsApp</a>
+  </section>
+  <section class="section" id="servicos">
+    <h2>Serviços</h2>
+    <div class="services">
+      <div class="card">Coberturas Metálicas</div>
+      <div class="card">Mezaninos</div>
+      <div class="card">Estruturas Prediais</div>
+      <div class="card">Portões</div>
+      <div class="card">Grades</div>
+      <div class="card">Portas de Metal</div>
+    </div>
+  </section>
+  <section class="section" id="sobre">
+    <h2>Sobre a Serralheria Manancial</h2>
+    <p style="max-width: 800px; margin: auto; text-align: center;">
+      Com mais de 40 anos de experiência, oferecemos soluções metálicas com qualidade, segurança e acabamento impecável.
+      Atendemos obras residenciais, comerciais e industriais com excelência.
+    </p>
+  </section>
+  <section class="section">
+    <h2>Depoimentos</h2>
+    <div class="depoimentos">
+      <div class="card">"Qualidade e profissionalismo do início ao fim!"</div>
+      <div class="card">"Nosso galpão ficou incrível. Recomendo!"</div>
+      <div class="card">"Portão automático funcional e bonito. Entrega rápida."</div>
+    </div>
+  </section>
+  <section class="section" id="contato">
+    <h2>Solicite um Orçamento</h2>
+    <form class="formulario">
+      <input type="text" placeholder="Seu nome completo" required>
+      <input type="tel" placeholder="Telefone com DDD" required>
+      <input type="text" placeholder="Cidade / Bairro">
+      <select>
+        <option value="">Tipo de serviço</option>
+        <option>Cobertura</option>
+        <option>Mezanino</option>
+        <option>Portão</option>
+        <option>Grade</option>
+        <option>Outro</option>
+      </select>
+      <button type="submit">Quero um Orçamento Personalizado</button>
+    </form>
+  </section>
+  <footer>
+    <p>© 2025 Serralheria Manancial – Todos os direitos reservados.</p>
+    <p>Instagram: @serralheiramanancialsp | WhatsApp: (11) 94759-0651</p>
+  </footer>
+</body>
+</html>
